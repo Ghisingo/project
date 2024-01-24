@@ -1,0 +1,36 @@
+{% load static %}
+
+<section class="feature-area section-gap" id="service">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 pb-40 header-text">
+          <h1>What Services we offer to our clients</h1>
+          <p>Who are in extremely love with eco friendly system.</p>
+        </div>
+      </div>
+      <div class="row">
+        {% for service  in services %}
+        <div class="col-lg-4 col-md-6">
+          <div class="single-feature">
+            <h4><span class="lnr lnr-user"></span>Expert Technicians</h4>
+            <p>
+              Usage of the Internet is becoming more common due to rapid
+              advancement of technology and power.
+            </p>
+          </div>
+        </div>
+          <div class="single-feature">
+            <h4>
+                <i class="{{service.icon}}"></i>
+                {{service.name}}
+            </h4>
+            <p>
+              {{service.description}}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </section>
